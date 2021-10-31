@@ -1,0 +1,437 @@
+::-webkit-scrollbar { display: none; }
+body {
+    background-color: rgb(1, 1, 100);
+    overflow: hidden;
+    font-family: "Neo둥근모", "neodgm";
+}
+.fin-login{
+    // display: none;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(1, 1, 100);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 3.5s;
+}
+.moniter {
+    position: relative;
+    transition: all 1s ease;
+    .moniter-frame {
+        position: relative;
+        width: 680px;
+        height: 530px;
+        background-color: rgb(197, 196, 162);
+        border-radius: 6px;
+        margin: 100px auto 0;
+            .moniter-inner {
+                position: absolute;
+                width: 550px;
+                height: 400px;
+                background-color: rgb(126, 126, 126);
+                top: 47%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 3px;
+        
+                .moniter-display {
+                    position: absolute;
+                    width: 528px;
+                    height: 370px;
+                    background-color: #fff;
+                    top: 49%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 3px solid rgb(0, 0, 0);
+                    background-image: url(img/background.jpg);
+                    .display-off {
+                        position: absolute;
+                        background-color: black ;
+                        width: 523px;
+                        height: 100%;
+                        z-index: 50;
+                        display: block;
+                        transition: all 0.7s ease-in-out;
+                    }
+
+                    .display-on {
+                        position: absolute;
+                        transition: all 1s ease-in-out;
+                        display: block;
+                        .icon {
+                            position: absolute;
+                            margin: 20px;
+                            div{
+                                margin-bottom: 30px;
+                                cursor: pointer;
+                                text-align: center;
+                                font-size: 12px;
+                                color: #fff;
+                                text-shadow: 1px 1px 1px black;
+                                &:nth-child(3) {
+                                    img{
+                                        margin-bottom: 3px;
+                                    }
+                                }
+                                img {
+                                    display: block;
+                                    margin: 0 auto;
+                                    
+                                }
+
+                            }
+                        }
+                        .help {
+                            position: absolute;
+                            width: 522px;
+                            height: 365px;
+                            background-color: rgb(29, 29, 29);
+                            padding: 20px 30px 20px 20px;
+                            overflow: auto;
+                            color: rgb(230, 230, 230);
+                            h3{
+                                span{
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                }
+                            }
+                            .help-close {
+                                position: fixed;
+                                font-size: 25px;
+                                top: 15px;
+                                right: 15px;
+                                cursor: pointer;
+                            }
+                            h4{
+                                font-weight: 500;
+                                letter-spacing: 1px;
+                                font-size: 20px;
+                                color: cyan;
+                            }
+                            .flex {
+                                p:nth-child(1) {
+                                    padding-right: 10px;
+                                }
+                            }
+                            p {
+                                margin-bottom: 6px;
+                            }
+                        }
+                        .login-cover,
+                        .question-cover {
+                            position: absolute;
+                            width: 530px;
+                            height: 370px;
+                        }
+                        .question{
+                            top: 57%;
+                            left: 55%;
+                        }
+                        .login{
+                            top: 50%;
+                            left: 50%;
+                        }
+                        .folder {
+                            position: absolute;
+                            width: 350px;
+                            height: 130px;
+                            background: linear-gradient( to right, #d5d2ce , #e2dedb);
+                            padding: 2px;
+                            transform: translate(-50%, -50%);
+                            border-top: 1px solid #fff;
+                            border-left: 1px solid #fff;
+                            border-right: 1px solid #000;
+                            border-bottom: 1px solid #000;
+                            .folder-header {
+                                width: 100%;
+                                height: 20px;
+                                background: linear-gradient( to right, #1b2e67 , #bdccd7);
+                                padding: 0 5px ;
+                                p {
+                                    line-height: 20px;
+                                    color: #fff;
+                                    margin-right: auto;
+                                }
+                                .header-btn {
+                                    width: 15px;
+                                    height: 15px;
+                                    background-color: #c4c0c2;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    border-top: 1px solid #fff;
+                                    border-left: 1px solid #fff;
+                                    border-right: 1px solid #000;
+                                    border-bottom: 1px solid #000;
+                                    margin-top: 2px;
+                                    border-radius: 1px;
+                                    margin-left: 3px;
+                                    &:hover {
+                                        background-color: #bdbcbc;
+                                    }
+                                    p {
+                                        color: #000;
+                                        font-weight: 600;
+                                        line-height: 15px;
+                                    }
+                                }
+                            }
+                            .question-body{
+                                padding: 10px;
+                                font-size: 14px;
+                                p{
+                                    line-height: 17px;
+                                }
+                            }
+                            .login-body{
+                                text-align: center;
+                                padding-top: 10px;
+                                font-size: 14px;
+                                p{
+                                    font-size: 16px;
+                                    &:nth-child(2){
+                                        font-size: 12px;
+                                        margin-top: 10px;
+                                    }
+                                }
+                                .password {
+                                margin: 9px 45px;
+                                #inputText {
+                                    width: 200px;
+                                    margin-right: 5px;
+                                }
+                                button {
+                                    border-radius: 0px;
+                                    border-top: 1px solid #fff;
+                                    border-left: 1px solid #fff;
+                                    border-right: 1px solid #000;
+                                    border-bottom: 1px solid #000;
+                                    background-color: rgb(211, 211, 211);
+                                    cursor: pointer;
+                                    &:hover {
+                                        background-color: rgb(190, 190, 190);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .moniter-bottom {
+            position: absolute;
+            align-items: center;
+            text-align: center;
+            width: 540px;
+            left: 70px;
+            bottom: 30px;
+            .mointer-logo {
+                margin-right: auto;
+                h3 {
+                    color: rgb(129, 129, 129);
+                    text-shadow: 1px 1px 1px rgb(248, 247, 172);
+                    letter-spacing:1px;
+                }
+            }
+            .light {
+                width: 10px;
+                height: 5px;
+                border-radius: 4px;
+                background-color: rgb(0, 0, 0);
+                margin-right: 15px;
+            }
+            .light-on {
+                width: 10px;
+                height: 5px;
+                border-radius: 4px;
+                background-color: rgb(235, 255, 52);
+                margin-right: 15px;
+            }
+            .btn-cover {
+                width: 40px;
+                height: 40px;
+                border: 1px solid rgb(143, 143, 143);
+                border-radius: 3px;
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(193, 197, 169);
+                }
+                .on-off-btn {
+                    width: 25px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);            
+                }
+            }
+
+        }
+        .post-it {
+            position: absolute;
+            right: -130px;
+            top: 40px;
+            width: 150px;
+            height: 40px;
+            background-color: rgb(255, 245, 110);
+            padding: 0 0 0 25px;
+            p {
+                line-height: 40px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .do-today {
+            position: absolute;
+            right: -130px;
+            top: 110px;
+            width: 150px;
+            height: 160px;
+            background-color: rgb(255, 245, 110);
+            padding: 15px 0 0 25px;
+            p {
+                margin-bottom: 15px;
+                &:nth-of-type(1) {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+.keyboard {
+    width: 900px;
+    height: 320px;
+    background-color: rgb(199, 199, 185);
+    margin: 300px auto 0;
+    border-radius: 10px;
+    padding: 20px 37px;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    visibility : hidden;
+    transition: all 1s ease;
+    .first-keys {
+        margin-bottom: 20px;
+        font-size: 20px;
+        div {
+            width: 45px;
+            height: 45px;
+            background: gray;
+            border-radius: 5px;
+            margin-right: 10px;
+            line-height: 45px;
+            cursor: pointer;
+            &:first-child {
+                font-size: 16px;
+                margin-right: 62px;
+            }
+            &:nth-child(5) {
+                margin-right: 44px;
+            }
+            &:nth-child(9) {
+                margin-right: 44px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                background-color: rgb(138, 138, 138);
+            }
+        }
+    }
+    .second-keys {
+        margin-bottom: 10px;
+        font-size: 20px;
+        div {
+            width: 45px;
+            height: 45px;
+            background: gray;
+            border-radius: 5px;
+            margin-right: 10px;
+            line-height: 45px;
+            cursor: pointer;
+            &:last-child {
+                font-size: 16px;
+                width: 110px;
+                margin-right: 0;
+            }
+            &:hover {
+                background-color: rgb(138, 138, 138);
+            }
+        }
+    }
+    .third-keys {
+        margin-bottom: 10px;
+        div {
+            width: 45px;
+            height: 45px;
+            background: gray;
+            border-radius: 5px;
+            margin-right: 10px;
+            line-height: 45px;
+            cursor: pointer;
+            &:first-child {
+                width: 77px;
+                font-size: 16px;
+            }
+            &:last-child {
+                font-size: 20px;
+                width: 78px;
+                margin-right: 0;
+            }
+            &:hover {
+                background-color: rgb(138, 138, 138);
+            }
+        }
+    }
+    .forth-keys{
+        margin-bottom: 10px;
+        div {
+            width: 45px;
+            height: 45px;
+            background: gray;
+            border-radius: 5px;
+            margin-right: 10px;
+            line-height: 45px;
+            cursor: pointer;
+            &:first-child {
+                width: 110px;
+                font-size: 16px;
+            }
+            &:last-child {
+                font-size: 16px;
+                width: 110px;
+                margin-right: 0;
+            }
+            &:hover {
+                background-color: rgb(138, 138, 138);
+            }
+        }
+    }
+    .last-keys {
+        div {
+            width: 45px;
+            height: 45px;
+            background: gray;
+            border-radius: 5px;
+            margin-right: 10px;
+            line-height: 45px;
+            cursor: pointer;
+            &:first-child {
+                width: 133px;
+                font-size: 16px;
+            }
+            &:last-child {
+                font-size: 16px;
+                width: 133px;
+                margin-right: 0;
+            }
+            &:hover {
+                background-color: rgb(138, 138, 138);
+            }
+        }
+    }
+}

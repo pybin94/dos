@@ -1,0 +1,519 @@
+@charset "UTF-8";
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: 'NeoDunggeunmo';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #010164;
+  overflow: hidden;
+  font-family: "Neo둥근모", "neodgm";
+}
+
+.fin-login {
+  position: absolute;
+  z-index: -1;
+  background-color: #010164;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 3.5s;
+  transition: all 3.5s;
+}
+
+.moniter {
+  position: relative;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.moniter .moniter-frame {
+  position: relative;
+  width: 680px;
+  height: 530px;
+  background-color: #c5c4a2;
+  border-radius: 6px;
+  margin: 100px auto 0;
+}
+
+.moniter .moniter-frame .moniter-inner {
+  position: absolute;
+  width: 550px;
+  height: 400px;
+  background-color: #7e7e7e;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 3px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display {
+  position: absolute;
+  width: 528px;
+  height: 370px;
+  background-color: #fff;
+  top: 49%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 3px solid black;
+  background-image: url(img/background.jpg);
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-off {
+  position: absolute;
+  background-color: black;
+  width: 523px;
+  height: 100%;
+  z-index: 50;
+  display: block;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on {
+  position: absolute;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  display: block;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .icon {
+  position: absolute;
+  margin: 20px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .icon div {
+  margin-bottom: 30px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .icon div:nth-child(3) img {
+  margin-bottom: 3px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .icon div img {
+  display: block;
+  margin: 0 auto;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .help {
+  position: absolute;
+  width: 522px;
+  height: 365px;
+  background-color: #1d1d1d;
+  padding: 20px 30px 20px 20px;
+  overflow: auto;
+  color: #e6e6e6;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .help h3 span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .help .help-close {
+  position: fixed;
+  font-size: 25px;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .help h4 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: cyan;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .help .flex p:nth-child(1) {
+  padding-right: 10px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .help p {
+  margin-bottom: 6px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .login-cover,
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .question-cover {
+  position: absolute;
+  width: 530px;
+  height: 370px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .question {
+  top: 57%;
+  left: 55%;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .login {
+  top: 50%;
+  left: 50%;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder {
+  position: absolute;
+  width: 350px;
+  height: 130px;
+  background: -webkit-gradient(linear, left top, right top, from(#d5d2ce), to(#e2dedb));
+  background: linear-gradient(to right, #d5d2ce, #e2dedb);
+  padding: 2px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .folder-header {
+  width: 100%;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#1b2e67), to(#bdccd7));
+  background: linear-gradient(to right, #1b2e67, #bdccd7);
+  padding: 0 5px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .folder-header p {
+  line-height: 20px;
+  color: #fff;
+  margin-right: auto;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .folder-header .header-btn {
+  width: 15px;
+  height: 15px;
+  background-color: #c4c0c2;
+  text-align: center;
+  cursor: pointer;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-top: 2px;
+  border-radius: 1px;
+  margin-left: 3px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .folder-header .header-btn:hover {
+  background-color: #bdbcbc;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .folder-header .header-btn p {
+  color: #000;
+  font-weight: 600;
+  line-height: 15px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .question-body {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .question-body p {
+  line-height: 17px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .login-body {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .login-body p {
+  font-size: 16px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .login-body p:nth-child(2) {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .login-body .password {
+  margin: 9px 45px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .login-body .password #inputText {
+  width: 200px;
+  margin-right: 5px;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .login-body .password button {
+  border-radius: 0px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.moniter .moniter-frame .moniter-inner .moniter-display .display-on .folder .login-body .password button:hover {
+  background-color: #bebebe;
+}
+
+.moniter .moniter-frame .moniter-bottom {
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 540px;
+  left: 70px;
+  bottom: 30px;
+}
+
+.moniter .moniter-frame .moniter-bottom .mointer-logo {
+  margin-right: auto;
+}
+
+.moniter .moniter-frame .moniter-bottom .mointer-logo h3 {
+  color: #818181;
+  text-shadow: 1px 1px 1px #f8f7ac;
+  letter-spacing: 1px;
+}
+
+.moniter .moniter-frame .moniter-bottom .light {
+  width: 10px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: black;
+  margin-right: 15px;
+}
+
+.moniter .moniter-frame .moniter-bottom .light-on {
+  width: 10px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: #ebff34;
+  margin-right: 15px;
+}
+
+.moniter .moniter-frame .moniter-bottom .btn-cover {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #8f8f8f;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.moniter .moniter-frame .moniter-bottom .btn-cover:hover {
+  background-color: #c1c5a9;
+}
+
+.moniter .moniter-frame .moniter-bottom .btn-cover .on-off-btn {
+  width: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.moniter .moniter-frame .post-it {
+  position: absolute;
+  right: -130px;
+  top: 40px;
+  width: 150px;
+  height: 40px;
+  background-color: #fff56e;
+  padding: 0 0 0 25px;
+}
+
+.moniter .moniter-frame .post-it p {
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+
+.moniter .moniter-frame .do-today {
+  position: absolute;
+  right: -130px;
+  top: 110px;
+  width: 150px;
+  height: 160px;
+  background-color: #fff56e;
+  padding: 15px 0 0 25px;
+}
+
+.moniter .moniter-frame .do-today p {
+  margin-bottom: 15px;
+}
+
+.moniter .moniter-frame .do-today p:nth-of-type(1) {
+  margin-top: 15px;
+}
+
+.keyboard {
+  width: 900px;
+  height: 320px;
+  background-color: #c7c7b9;
+  margin: 300px auto 0;
+  border-radius: 10px;
+  padding: 20px 37px;
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  visibility: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.keyboard .first-keys {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.keyboard .first-keys div {
+  width: 45px;
+  height: 45px;
+  background: gray;
+  border-radius: 5px;
+  margin-right: 10px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.keyboard .first-keys div:first-child {
+  font-size: 16px;
+  margin-right: 62px;
+}
+
+.keyboard .first-keys div:nth-child(5) {
+  margin-right: 44px;
+}
+
+.keyboard .first-keys div:nth-child(9) {
+  margin-right: 44px;
+}
+
+.keyboard .first-keys div:last-child {
+  margin-right: 0;
+}
+
+.keyboard .first-keys div:hover {
+  background-color: #8a8a8a;
+}
+
+.keyboard .second-keys {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.keyboard .second-keys div {
+  width: 45px;
+  height: 45px;
+  background: gray;
+  border-radius: 5px;
+  margin-right: 10px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.keyboard .second-keys div:last-child {
+  font-size: 16px;
+  width: 110px;
+  margin-right: 0;
+}
+
+.keyboard .second-keys div:hover {
+  background-color: #8a8a8a;
+}
+
+.keyboard .third-keys {
+  margin-bottom: 10px;
+}
+
+.keyboard .third-keys div {
+  width: 45px;
+  height: 45px;
+  background: gray;
+  border-radius: 5px;
+  margin-right: 10px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.keyboard .third-keys div:first-child {
+  width: 77px;
+  font-size: 16px;
+}
+
+.keyboard .third-keys div:last-child {
+  font-size: 20px;
+  width: 78px;
+  margin-right: 0;
+}
+
+.keyboard .third-keys div:hover {
+  background-color: #8a8a8a;
+}
+
+.keyboard .forth-keys {
+  margin-bottom: 10px;
+}
+
+.keyboard .forth-keys div {
+  width: 45px;
+  height: 45px;
+  background: gray;
+  border-radius: 5px;
+  margin-right: 10px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.keyboard .forth-keys div:first-child {
+  width: 110px;
+  font-size: 16px;
+}
+
+.keyboard .forth-keys div:last-child {
+  font-size: 16px;
+  width: 110px;
+  margin-right: 0;
+}
+
+.keyboard .forth-keys div:hover {
+  background-color: #8a8a8a;
+}
+
+.keyboard .last-keys div {
+  width: 45px;
+  height: 45px;
+  background: gray;
+  border-radius: 5px;
+  margin-right: 10px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.keyboard .last-keys div:first-child {
+  width: 133px;
+  font-size: 16px;
+}
+
+.keyboard .last-keys div:last-child {
+  font-size: 16px;
+  width: 133px;
+  margin-right: 0;
+}
+
+.keyboard .last-keys div:hover {
+  background-color: #8a8a8a;
+}
+/*# sourceMappingURL=dos.css.map */
