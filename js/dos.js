@@ -113,7 +113,7 @@ $(document).ready(function(){
                 document.querySelector(".fin-login").style.zIndex = "100"
                 document.querySelector(".fin-login").style.opacity = "1"
                 setTimeout(function(){
-                    location.href="http://www.naver.com";
+                    location.href="https://pybin94.github.io/portfolio.github.oi/main.html";
                 }, 3500);
             }else{
                 document.querySelector(".error-sound").play()
